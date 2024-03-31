@@ -1,5 +1,5 @@
-import Input from '../src/views/Input';
-import Validate from '../src/utils/Validate';
+import Input from '../../src/views/Input';
+import Validate from '../../src/utils/Validate';
 import { Console } from '@woowacourse/mission-utils';
 
 jest.mock('@woowacourse/mission-utils', () => ({

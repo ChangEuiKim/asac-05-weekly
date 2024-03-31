@@ -1,4 +1,4 @@
-import Validate from "../src/utils/Validate";
+import Validate from "../../src/utils/Validate";
 
 describe('Validate 클래스 테스트', () => {
   const validate = new Validate();
