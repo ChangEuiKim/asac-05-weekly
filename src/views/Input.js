@@ -15,7 +15,8 @@ export default class Input {
    */
   async readCarNames() {
     try {
-      const MESSAGE = '경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)';
+      const MESSAGE =
+        '경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)';
       const nameInput = await Console.readLineAsync(MESSAGE);
       // 입력값을 쉼표를 기준으로 파싱하고 좌우 공백을 삭제한다.
       const nameArray = nameInput.split(',').map(name => name.trim());
@@ -46,6 +47,6 @@ export default class Input {
       return rounds;
     } catch (error) {
       throw error;
-    }    
+    }
   }
 }

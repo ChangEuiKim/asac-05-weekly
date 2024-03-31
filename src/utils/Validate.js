@@ -1,5 +1,4 @@
 class Validate {
-
   /**
    * 배열 이름에 대한 검증 함수들을 호출하고, 문제가 없다면 반환하고, 문제가 있다면 해당 에러를 반환한다.
    */
@@ -47,26 +46,33 @@ class Validate {
   }
 
   isNotUndefined(value) {
-    return value !== undefined ? null : '입력값이 undefined입니다.' ;
+    return value !== undefined ? null : '입력값이 undefined입니다.';
   }
 
   checkMultiPlayer(nameArray) {
-    return Array.isArray(nameArray) && nameArray.length > 1 ? null : '플레이어는 두 명 이상이어야 합니다.';
+    return Array.isArray(nameArray) && nameArray.length > 1
+      ? null
+      : '플레이어는 두 명 이상이어야 합니다.';
   }
 
   checkNameMaxLength(nameArray) {
-    return nameArray.every(name => name.length <= 5) ? null : '자동차 이름은 5자 이하만 가능합니다.';
+    return nameArray.every(name => name.length <= 5)
+      ? null
+      : '자동차 이름은 5자 이하만 가능합니다.';
   }
 
   checkNameUnique(nameArray) {
     const nameSet = new Set(nameArray);
-    return nameSet.size === nameArray.length ? null : '자동차 이름은 중복될 수 없습니다.';
+    return nameSet.size === nameArray.length
+      ? null
+      : '자동차 이름은 중복될 수 없습니다.';
   }
 
   isNaturalNumber(rounds) {
-    return Number.isInteger(rounds) && rounds > 0 ? null : '시도할 횟수는 자연수여야 합니다.';
+    return Number.isInteger(rounds) && rounds > 0
+      ? null
+      : '시도할 횟수는 자연수여야 합니다.';
   }
-
 }
 
 export default Validate;

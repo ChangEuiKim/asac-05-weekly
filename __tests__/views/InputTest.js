@@ -15,7 +15,7 @@ describe('Input 클래스의 메서드 테스트', () => {
   beforeEach(() => {
     // Validate의 모든 메서드를 모킹
     Validate.prototype.validateNameArray = jest.fn();
-    Validate.prototype.validateRounds = jest.fn();        
+    Validate.prototype.validateRounds = jest.fn();
     input = new Input();
   });
 
@@ -23,7 +23,7 @@ describe('Input 클래스의 메서드 테스트', () => {
     test('올바른 자동차 이름을 입력받으면, 이름 배열을 반환해야 한다', async () => {
       // given
       Console.readLineAsync.mockResolvedValueOnce('pobi,wuri,jun');
-      const nameArray = ['pobi','wuri','jun']
+      const nameArray = ['pobi', 'wuri', 'jun'];
       Validate.prototype.validateNameArray.mockImplementation(() => {});
 
       // when
@@ -40,7 +40,7 @@ describe('Input 클래스의 메서드 테스트', () => {
       Validate.prototype.validateNameArray.mockImplementation(() => {
         throw new Error(ERROR_MESSAGE);
       });
-      
+
       // when
       const result = input.readCarNames();
 
@@ -52,8 +52,8 @@ describe('Input 클래스의 메서드 테스트', () => {
   describe('readRounds 메서드', () => {
     test('올바른 시도할 횟수를 입력받으면, 이를 반환해야 한다', async () => {
       // given
-      Console.readLineAsync.mockResolvedValueOnce('5');  
-      const rounds = 5;      
+      Console.readLineAsync.mockResolvedValueOnce('5');
+      const rounds = 5;
       Validate.prototype.validateRounds.mockImplementation(() => {});
 
       // when
@@ -65,19 +65,17 @@ describe('Input 클래스의 메서드 테스트', () => {
 
     test('validateRounds에서 에러가 발생하면, 에러를 반환해야 한다', async () => {
       // given
-      Console.readLineAsync.mockResolvedValueOnce('0');  
+      Console.readLineAsync.mockResolvedValueOnce('0');
       const ERROR_MESSAGE = '[ERROR]';
       Validate.prototype.validateRounds.mockImplementation(() => {
         throw new Error(ERROR_MESSAGE);
       });
-      
+
       // when
       const result = input.readRounds();
 
       // then
       await expect(result).rejects.toThrow(ERROR_MESSAGE);
     });
-
   });
-
 });

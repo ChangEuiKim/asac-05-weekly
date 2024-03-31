@@ -1,17 +1,13 @@
-import Input from './views/Input';
+import gameController from './controller/GameController';
 
 class App {
   constructor() {
-    this.input = new Input();
+    this.gameController = new gameController();
   }
 
   async play() {
     try {
-      const nameArray = await this.input.readCarNames();
-      const rounds = await this.input.readRounds();
-
-      // 게임 처리
-
+      await this.gameController.runGame();
     } catch (error) {
       throw error;
     }
