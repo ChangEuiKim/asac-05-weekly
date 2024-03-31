@@ -2,9 +2,9 @@
 
 ## 입력
 
-- [ ] `@woowacourse/mission-utils`에서 제공하는 `Console` API를 사용하여 `Console.readLineAsync`를 활용해 사용자의 값을 입력받는다.
-  - [ ]  사용자는 n대의 자동차 이름의 목록을 입력할 수 있어야 한다.
-  - [ ]  사용자는 몇 번의 이동을 할 것인지를 입력할 수 있어야 한다.
+- [x] `@woowacourse/mission-utils`에서 제공하는 `Console` API를 사용하여 `Console.readLineAsync`를 활용해 사용자의 값을 입력받는다.
+  - [x]  사용자는 n대의 자동차 이름의 목록을 입력할 수 있어야 한다.
+  - [x]  사용자는 몇 번의 이동을 할 것인지를 입력할 수 있어야 한다.
 - [ ] 자동차 이름의 입력값 검증을 수행한다.
   - [ ] 자동차 이름은 쉼표(,)를 기준으로 구분한다.
   - [ ] 자동차 이름은 5자 이하만 가능하다.
@@ -48,15 +48,15 @@
 ```
 src
 ├── views
-|   ├── input.js
-|   └── output.js
+|   ├── Input.js
+|   └── Output.js
 ├── controller
-|   └── gameController.js
+|   └── GameController.js
 ├── model
-|   ├── car.js
-|   └── racing.js
+|   ├── Car.js
+|   └── Racing.js
 └── utils
-    └── validate.js
+    └── Validate.js
 ```
 
 # 프로그래밍 요구 사항
