@@ -1,0 +1,11 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: 540px;
+  border: 2px dashed var(--primary);
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
