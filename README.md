@@ -10,7 +10,7 @@
 
 - 2024년 3월 넷째주 과제입니다. 자바스크립트 ES6+ 문법과 클래스 객체를 사용하여 레이싱을 구현합니다.
 
-### week2-react-crud
+### week3-react-crud
 
 - 2024년 4월 둘째주 과제입니다. 리액트에서 상태를 관리하여 Create, Read, Update, Delete를 구현합니다.
 
