@@ -1,9 +1,15 @@
+import RacingCarInputView from './view/RacingCarInputView.js';
+
 class App {
+  constructor() {
+    this.inputView = new RacingCarInputView();
+  }
+
   async play() {
     // // pseudo code
     // // 1 입력
-    // const car_array = RacingCarInputView.getRacingCarInput();
-    // const round_number = RacingCarInputView.getRoundInput();
+    const car_array = this.inputView.getRacingCarInput();
+    const round_number = this.inputView.getRoundInput();
     // // 2 경기
     // const racing = new Racing(car_array, round_number);
     // const winner = racing.race();

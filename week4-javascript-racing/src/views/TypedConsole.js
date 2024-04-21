@@ -1,10 +1,5 @@
 import { Console } from '@woowacourse/mission-utils';
 
-const GUIDE_MESSAGE = {
-  CAR_NAMES: '경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)',
-  ROUNDS: '시도할 횟수는 몇 회인가요?',
-};
-
 const ERROR_MESSAGE = {
   NO_INPUT: '[ERROR] 입력값이 없습니다. 다시 입력해주세요.',
 };
@@ -16,8 +11,8 @@ export default class TypedConsole {
    * @throws {Error} 입력값이 없을 경우
    * @returns {string[]} 자동차 이름 배열
    */
-  static async readArrayAsync() {
-    const stringLine = await Console.readLineAsync(GUIDE_MESSAGE.CAR_NAMES);
+  static async readArrayAsync(GUIDE_MESSAGE) {
+    const stringLine = await Console.readLineAsync(GUIDE_MESSAGE);
 
     if (!stringLine?.length) {
       throw new Error(ERROR_MESSAGE.NO_INPUT);
@@ -31,8 +26,8 @@ export default class TypedConsole {
    * @throws {Error} 입력값이 없을 경우
    * @returns {number} 시도할 횟수
    */
-  static async readNumberAsync() {
-    const string = await Console.readLineAsync(GUIDE_MESSAGE.ROUNDS);
+  static async readNumberAsync(GUIDE_MESSAGE) {
+    const string = await Console.readLineAsync(GUIDE_MESSAGE);
 
     if (!string?.length) {
       throw new Error(ERROR_MESSAGE.NO_INPUT);
